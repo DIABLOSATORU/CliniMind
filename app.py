@@ -42,31 +42,31 @@ def predict(values, dic):
         dic.update(dic2)
         values2 = list(map(float, list(dic.values())))
 
-        model = pickle.load(open('C:\\Users\\Wizard\\Downloads\\Disease-Predictor\\models\\diabetes.pkl','rb'))
+        model = pickle.load(open('models\\diabetes.pkl','rb'))
         values = np.asarray(values2)
         return model.predict(values.reshape(1, -1))[0]
 
     # breast_cancer
     elif len(values) == 22:
-        model = pickle.load(open('C:\\Users\\Wizard\\Downloads\\Disease-Predictor\\models\\breast_cancer.pkl','rb'))
+        model = pickle.load(open('models\\breast_cancer.pkl','rb'))
         values = np.asarray(values)
         return model.predict(values.reshape(1, -1))[0]
 
     # heart disease
     elif len(values) == 13:
-        model = pickle.load(open('C:\\Users\\Wizard\\Downloads\\Disease-Predictor\\models\\heart.pkl','rb'))
+        model = pickle.load(open('models\\heart.pkl','rb'))
         values = np.asarray(values)
         return model.predict(values.reshape(1, -1))[0]
 
     # kidney disease
     elif len(values) == 24:
-        model = pickle.load(open('C:\\Users\\Wizard\\Downloads\\Disease-Predictor\\models\\kidney.pkl','rb'))
+        model = pickle.load(open('models\\kidney.pkl','rb'))
         values = np.asarray(values)
         return model.predict(values.reshape(1, -1))[0]
 
     # liver disease
     elif len(values) == 10:
-        model = pickle.load(open('C:\\Users\\Wizard\\Downloads\\Disease-Predictor\\models\\liver.pkl','rb'))
+        model = pickle.load(open('models\\liver.pkl','rb'))
         values = np.asarray(values)
         return model.predict(values.reshape(1, -1))[0]
 
